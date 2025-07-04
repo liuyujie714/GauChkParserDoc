@@ -1,0 +1,8 @@
+#!/bin/bash
+
+pdoc3 --html --force GauChkParser 
+
+cp html/*.html index.html
+rm -rf html
+
+

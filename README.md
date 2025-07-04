@@ -16,7 +16,13 @@ The Python module extracts common basic information from **Gaussian** `.chk` bin
 
 * TODO ...
 
-  
+
+
+# NOTE
+
+`ONIOM` is currently not supported
+
+
 
 # Installation
 
@@ -26,11 +32,9 @@ pip install GauChkParser -i https://test.pypi.org/simple/
 
 
 
-
-
 # Python API
 
-https://liuyujie714.github.io/GauChkParserDoc/
+Full API documents https://liuyujie714.github.io/GauChkParserDoc/
 
 
 
@@ -41,7 +45,10 @@ First import GauChkParser module
 from GauChkParser import ChkReader
 ```
 
+
+
 Use `ChkReader` class to read your Gaussian `.chk` binary file
+
 ```python
 obj = ChkReader("yourjob.chk")
 mol = obj.params.mol
@@ -50,7 +57,7 @@ print(f'Route: {obj.params.route}')
 print(f'Natoms: {mol.natoms}')
 print(f'Total charge: {mol.totchg}')
 print(f'Multiplicity {mol.multiplicity}')
-print(f'Element names (Angstrom): {mol.names}')
+print(f'Element names: {mol.names}')
 print(f'Coords (Angstrom): {mol.coords}')
 print(f'Hessian Matrix: {mol.hessian}')
 
@@ -58,3 +65,4 @@ print(f'Hessian Matrix: {mol.hessian}')
 # write gjf file
 obj.write_gjf("XXX.gjf")
 ```
+
