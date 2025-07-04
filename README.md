@@ -11,15 +11,31 @@ The Python module extracts common basic information from **Gaussian** `.chk` bin
 # Features
 
 * Basic atomic information, such as element names, coordinates
+
 * Hessian matrix (`3N*3N symmetric matrix`)
+
 * TODO ...
 
+  
+
 # Installation
+
 ```
 pip install GauChkParser -i https://test.pypi.org/simple/
 ```
 
+
+
+
+
 # Python API
+
+https://liuyujie714.github.io/GauChkParserDoc/
+
+
+
+# Example
+
 First import GauChkParser module
 ```python
 from GauChkParser import ChkReader
