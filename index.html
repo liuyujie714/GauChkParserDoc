@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 <meta name="generator" content="pdoc3 0.11.0">
 <title>GauChkParser API documentation</title>
-<meta name="description" content="A Gaussian .chk parser to extract basic information">
+<meta name="description" content="A Gaussian .chk parser to extract basic information. All energy values are in Hartree, length values are in Angstrom.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
@@ -25,7 +25,7 @@ hljs.highlightAll();
 <h1 class="title">Module <code>GauChkParser</code></h1>
 </header>
 <section id="section-intro">
-<p>A Gaussian .chk parser to extract basic information</p>
+<p>A Gaussian .chk parser to extract basic information. All energy values are in Hartree, length values are in Angstrom.</p>
 </section>
 <section>
 </section>
@@ -99,7 +99,7 @@ hljs.highlightAll();
 <dl>
 <dt id="GauChkParser.Mol.amocoeff"><code class="name">prop <span class="ident">amocoeff</span></code></dt>
 <dd>
-<div class="desc"><p>Alpha MO coefficients</p></div>
+<div class="desc"><p>Get Alpha MO coefficients</p></div>
 </dd>
 <dt id="GauChkParser.Mol.aoene"><code class="name">prop <span class="ident">aoene</span></code></dt>
 <dd>
@@ -107,11 +107,15 @@ hljs.highlightAll();
 </dd>
 <dt id="GauChkParser.Mol.bmocoeff"><code class="name">prop <span class="ident">bmocoeff</span></code></dt>
 <dd>
-<div class="desc"><p>Beta MO coefficients</p></div>
+<div class="desc"><p>Get Beta MO coefficients</p></div>
 </dd>
 <dt id="GauChkParser.Mol.boene"><code class="name">prop <span class="ident">boene</span></code></dt>
 <dd>
 <div class="desc"><p>Get Beta Orbital Energies</p></div>
+</dd>
+<dt id="GauChkParser.Mol.cell"><code class="name">prop <span class="ident">cell</span></code></dt>
+<dd>
+<div class="desc"><p>Get the cell size (3*3) of molecule, unit is Angstrom</p></div>
 </dd>
 <dt id="GauChkParser.Mol.coords"><code class="name">prop <span class="ident">coords</span></code></dt>
 <dd>
@@ -170,6 +174,7 @@ hljs.highlightAll();
 <li><code><a title="GauChkParser.Mol.aoene" href="#GauChkParser.Mol.aoene">aoene</a></code></li>
 <li><code><a title="GauChkParser.Mol.bmocoeff" href="#GauChkParser.Mol.bmocoeff">bmocoeff</a></code></li>
 <li><code><a title="GauChkParser.Mol.boene" href="#GauChkParser.Mol.boene">boene</a></code></li>
+<li><code><a title="GauChkParser.Mol.cell" href="#GauChkParser.Mol.cell">cell</a></code></li>
 <li><code><a title="GauChkParser.Mol.coords" href="#GauChkParser.Mol.coords">coords</a></code></li>
 <li><code><a title="GauChkParser.Mol.hessian" href="#GauChkParser.Mol.hessian">hessian</a></code></li>
 <li><code><a title="GauChkParser.Mol.multiplicity" href="#GauChkParser.Mol.multiplicity">multiplicity</a></code></li>
