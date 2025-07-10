@@ -60,7 +60,7 @@ print(f'Multiplicity {mol.multiplicity}')
 print(f'Element names: {mol.names}')
 print(f'Coords (Angstrom): {mol.coords}')
 print(f'Hessian Matrix: {mol.hessian}')
-
+print(f'Cell size: {mol.cell}')
 
 # write gjf file
 obj.write_gjf("XXX.gjf")
