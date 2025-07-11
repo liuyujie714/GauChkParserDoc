@@ -48,13 +48,29 @@ hljs.highlightAll();
 </ul>
 <h3>Instance variables</h3>
 <dl>
+<dt id="GauChkParser.ChkParams.genarr"><code class="name">prop <span class="ident">genarr</span></code></dt>
+<dd>
+<div class="desc"><p>The scalar data of the calculation, size=1000</p></div>
+</dd>
 <dt id="GauChkParser.ChkParams.mol"><code class="name">prop <span class="ident">mol</span></code></dt>
 <dd>
-<div class="desc"><p>Get mol structure</p></div>
+<div class="desc"><p>The mol structure</p></div>
 </dd>
 <dt id="GauChkParser.ChkParams.route"><code class="name">prop <span class="ident">route</span></code></dt>
 <dd>
-<div class="desc"><p>Get route string</p></div>
+<div class="desc"><p>The route string</p></div>
+</dd>
+<dt id="GauChkParser.ChkParams.scfene"><code class="name">prop <span class="ident">scfene</span></code></dt>
+<dd>
+<div class="desc"><p>SCF Energy</p></div>
+</dd>
+<dt id="GauChkParser.ChkParams.totene"><code class="name">prop <span class="ident">totene</span></code></dt>
+<dd>
+<div class="desc"><p>Total Energy</p></div>
+</dd>
+<dt id="GauChkParser.ChkParams.viratio"><code class="name">prop <span class="ident">viratio</span></code></dt>
+<dd>
+<div class="desc"><p>Virial Ratio</p></div>
 </dd>
 </dl>
 </dd>
@@ -99,47 +115,79 @@ hljs.highlightAll();
 <dl>
 <dt id="GauChkParser.Mol.amocoeff"><code class="name">prop <span class="ident">amocoeff</span></code></dt>
 <dd>
-<div class="desc"><p>Get Alpha MO coefficients</p></div>
+<div class="desc"><p>The Alpha MO coefficients</p></div>
 </dd>
 <dt id="GauChkParser.Mol.aoene"><code class="name">prop <span class="ident">aoene</span></code></dt>
 <dd>
-<div class="desc"><p>Get Alpha Orbital Energies</p></div>
+<div class="desc"><p>The Alpha Orbital Energies</p></div>
 </dd>
 <dt id="GauChkParser.Mol.bmocoeff"><code class="name">prop <span class="ident">bmocoeff</span></code></dt>
 <dd>
-<div class="desc"><p>Get Beta MO coefficients</p></div>
+<div class="desc"><p>The Beta MO coefficients</p></div>
 </dd>
 <dt id="GauChkParser.Mol.boene"><code class="name">prop <span class="ident">boene</span></code></dt>
 <dd>
-<div class="desc"><p>Get Beta Orbital Energies</p></div>
+<div class="desc"><p>The Beta Orbital Energies</p></div>
 </dd>
 <dt id="GauChkParser.Mol.cell"><code class="name">prop <span class="ident">cell</span></code></dt>
 <dd>
-<div class="desc"><p>Get the cell size (3*3) of molecule, unit is Angstrom</p></div>
+<div class="desc"><p>The cell size (3*3) of molecule, unit is Angstrom</p></div>
 </dd>
 <dt id="GauChkParser.Mol.coords"><code class="name">prop <span class="ident">coords</span></code></dt>
 <dd>
-<div class="desc"><p>Get atomic coords (N*3), unit is Angstrom</p></div>
+<div class="desc"><p>The atomic coords (N*3), unit is Angstrom</p></div>
 </dd>
 <dt id="GauChkParser.Mol.hessian"><code class="name">prop <span class="ident">hessian</span></code></dt>
 <dd>
-<div class="desc"><p>Get hessian Matrix (3N*3N)</p></div>
+<div class="desc"><p>The hessian Matrix (3N*3N)</p></div>
 </dd>
 <dt id="GauChkParser.Mol.multiplicity"><code class="name">prop <span class="ident">multiplicity</span></code></dt>
 <dd>
-<div class="desc"><p>Get the multiplicity of molecule</p></div>
+<div class="desc"><p>The multiplicity of molecule</p></div>
+</dd>
+<dt id="GauChkParser.Mol.nae"><code class="name">prop <span class="ident">nae</span></code></dt>
+<dd>
+<div class="desc"><p>The number of alpha electrons</p></div>
 </dd>
 <dt id="GauChkParser.Mol.names"><code class="name">prop <span class="ident">names</span></code></dt>
 <dd>
-<div class="desc"><p>Get atom element names</p></div>
+<div class="desc"><p>The atom element names</p></div>
 </dd>
 <dt id="GauChkParser.Mol.natoms"><code class="name">prop <span class="ident">natoms</span></code></dt>
 <dd>
-<div class="desc"><p>Get the number of atoms</p></div>
+<div class="desc"><p>The number of atoms</p></div>
+</dd>
+<dt id="GauChkParser.Mol.nbasis"><code class="name">prop <span class="ident">nbasis</span></code></dt>
+<dd>
+<div class="desc"><p>The number of basis functions</p></div>
+</dd>
+<dt id="GauChkParser.Mol.nbe"><code class="name">prop <span class="ident">nbe</span></code></dt>
+<dd>
+<div class="desc"><p>The number of beta electrons</p></div>
+</dd>
+<dt id="GauChkParser.Mol.nbsuse"><code class="name">prop <span class="ident">nbsuse</span></code></dt>
+<dd>
+<div class="desc"><p>The number of independent functions</p></div>
+</dd>
+<dt id="GauChkParser.Mol.ndim"><code class="name">prop <span class="ident">ndim</span></code></dt>
+<dd>
+<div class="desc"><p>The number of translation vectors (0-3 dim)</p></div>
+</dd>
+<dt id="GauChkParser.Mol.ne"><code class="name">prop <span class="ident">ne</span></code></dt>
+<dd>
+<div class="desc"><p>The number of electrons</p></div>
+</dd>
+<dt id="GauChkParser.Mol.orthbasis"><code class="name">prop <span class="ident">orthbasis</span></code></dt>
+<dd>
+<div class="desc"><p>The Orthonormal basis</p></div>
+</dd>
+<dt id="GauChkParser.Mol.shelltypes"><code class="name">prop <span class="ident">shelltypes</span></code></dt>
+<dd>
+<div class="desc"><p>The Shell types</p></div>
 </dd>
 <dt id="GauChkParser.Mol.totchg"><code class="name">prop <span class="ident">totchg</span></code></dt>
 <dd>
-<div class="desc"><p>Get the total charge of molecule</p></div>
+<div class="desc"><p>The total charge of molecule</p></div>
 </dd>
 </dl>
 </dd>
@@ -155,9 +203,13 @@ hljs.highlightAll();
 <ul>
 <li>
 <h4><code><a title="GauChkParser.ChkParams" href="#GauChkParser.ChkParams">ChkParams</a></code></h4>
-<ul class="">
+<ul class="two-column">
+<li><code><a title="GauChkParser.ChkParams.genarr" href="#GauChkParser.ChkParams.genarr">genarr</a></code></li>
 <li><code><a title="GauChkParser.ChkParams.mol" href="#GauChkParser.ChkParams.mol">mol</a></code></li>
 <li><code><a title="GauChkParser.ChkParams.route" href="#GauChkParser.ChkParams.route">route</a></code></li>
+<li><code><a title="GauChkParser.ChkParams.scfene" href="#GauChkParser.ChkParams.scfene">scfene</a></code></li>
+<li><code><a title="GauChkParser.ChkParams.totene" href="#GauChkParser.ChkParams.totene">totene</a></code></li>
+<li><code><a title="GauChkParser.ChkParams.viratio" href="#GauChkParser.ChkParams.viratio">viratio</a></code></li>
 </ul>
 </li>
 <li>
@@ -178,8 +230,16 @@ hljs.highlightAll();
 <li><code><a title="GauChkParser.Mol.coords" href="#GauChkParser.Mol.coords">coords</a></code></li>
 <li><code><a title="GauChkParser.Mol.hessian" href="#GauChkParser.Mol.hessian">hessian</a></code></li>
 <li><code><a title="GauChkParser.Mol.multiplicity" href="#GauChkParser.Mol.multiplicity">multiplicity</a></code></li>
+<li><code><a title="GauChkParser.Mol.nae" href="#GauChkParser.Mol.nae">nae</a></code></li>
 <li><code><a title="GauChkParser.Mol.names" href="#GauChkParser.Mol.names">names</a></code></li>
 <li><code><a title="GauChkParser.Mol.natoms" href="#GauChkParser.Mol.natoms">natoms</a></code></li>
+<li><code><a title="GauChkParser.Mol.nbasis" href="#GauChkParser.Mol.nbasis">nbasis</a></code></li>
+<li><code><a title="GauChkParser.Mol.nbe" href="#GauChkParser.Mol.nbe">nbe</a></code></li>
+<li><code><a title="GauChkParser.Mol.nbsuse" href="#GauChkParser.Mol.nbsuse">nbsuse</a></code></li>
+<li><code><a title="GauChkParser.Mol.ndim" href="#GauChkParser.Mol.ndim">ndim</a></code></li>
+<li><code><a title="GauChkParser.Mol.ne" href="#GauChkParser.Mol.ne">ne</a></code></li>
+<li><code><a title="GauChkParser.Mol.orthbasis" href="#GauChkParser.Mol.orthbasis">orthbasis</a></code></li>
+<li><code><a title="GauChkParser.Mol.shelltypes" href="#GauChkParser.Mol.shelltypes">shelltypes</a></code></li>
 <li><code><a title="GauChkParser.Mol.totchg" href="#GauChkParser.Mol.totchg">totchg</a></code></li>
 </ul>
 </li>
