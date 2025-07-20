@@ -33,8 +33,5 @@ formats:
 python:
   install:
     - requirements: docs/requirements.txt 
-    - method: pip
-      packages:
-        - --index-url=https://test.pypi.org/simple/
-        - gauchkparser
+
 
