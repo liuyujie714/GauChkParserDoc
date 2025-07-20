@@ -29,9 +29,12 @@ formats:
 # Optional but recommended, declare the Python requirements required
 # to build your documentation
 # See https://docs.readthedocs.io/en/stable/guides/reproducible-builds.html
+# .readthedocs.yml
 python:
   install:
+    - requirements: docs/requirements.txt 
     - method: pip
-      command: |
-        pip install -r docs/requirements.txt
-        pip install --index-url https://test.pypi.org/simple gauchkparser
+      packages:
+        - --index-url=https://test.pypi.org/simple/
+        - gauchkparser
+
