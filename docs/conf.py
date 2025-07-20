@@ -9,7 +9,7 @@
 project = 'GauChkParser'
 copyright = '2025, Yujie Liu'
 author = 'Yujie Liu'
-release = '0.1.12'
+release = '0.1.x'
 
 
 #import os
