@@ -38,7 +38,7 @@ pip install GauChkParser -i https://test.pypi.org/simple/
 
 # Python API
 
-Full API documents https://liuyujie714.github.io/GauChkParserDoc/
+Full API documents https://gauchkparserdoc.readthedocs.io/en/latest/index.html
 
 
 
