@@ -10,4 +10,3 @@ sed -i '/:undoc-members:/d' docs/source/*.rst
 #sed -i 's/>Module / style="text-align: center;">/' index.html
 #rm -rf html
 
-
