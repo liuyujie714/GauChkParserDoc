@@ -1,9 +1,13 @@
 #!/bin/bash
 
-pdoc3 --html --force GauChkParser 
 
-cp html/*.html index.html
-sed -i 's/>Module / style="text-align: center;">/' index.html
-rm -rf html
+sphinx-apidoc -f -o docs/source/ ../GauChkParser/GauChkParser
+sed -i '/:undoc-members:/d' docs/source/*.rst
+
+
+#pdoc3 --html --force GauChkParser 
+#cp html/*.html index.html
+#sed -i 's/>Module / style="text-align: center;">/' index.html
+#rm -rf html
 
 

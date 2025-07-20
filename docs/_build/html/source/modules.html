@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>GauChkParser &mdash; GauChkParser 0.1.12 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GauChkParser package" href="GauChkParser.html" />
+    <link rel="prev" title="Python API" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GauChkParser
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">GauChkParser</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="GauChkParser.html">GauChkParser package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GauChkParser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>GauChkParser</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/source/modules.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="gauchkparser">
+<h1>GauChkParser<a class="headerlink" href="#gauchkparser" title="Permalink to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="GauChkParser.html">GauChkParser package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="GauChkParser.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GauChkParser.html#module-GauChkParser.ChkReader">GauChkParser.ChkReader module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GauChkParser.html#GauChkParser.ChkReader.ChkReader"><code class="docutils literal notranslate"><span class="pre">ChkReader</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.ChkReader.ChkReader.ilsw"><code class="docutils literal notranslate"><span class="pre">ChkReader.ilsw</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.ChkReader.ChkReader.params"><code class="docutils literal notranslate"><span class="pre">ChkReader.params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.ChkReader.ChkReader.rlsw"><code class="docutils literal notranslate"><span class="pre">ChkReader.rlsw</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.ChkReader.ChkReader.write_gjf"><code class="docutils literal notranslate"><span class="pre">ChkReader.write_gjf()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GauChkParser.html#module-GauChkParser.Constants">GauChkParser.Constants module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GauChkParser.html#GauChkParser.Constants.Bohr2Ang"><code class="docutils literal notranslate"><span class="pre">Bohr2Ang</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GauChkParser.html#module-GauChkParser.Types">GauChkParser.Types module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.ChkParams"><code class="docutils literal notranslate"><span class="pre">ChkParams</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.ChkParams.mol"><code class="docutils literal notranslate"><span class="pre">ChkParams.mol</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.ChkParams.route"><code class="docutils literal notranslate"><span class="pre">ChkParams.route</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.ChkParams.gauver"><code class="docutils literal notranslate"><span class="pre">ChkParams.gauver</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.ChkParams.title"><code class="docutils literal notranslate"><span class="pre">ChkParams.title</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.ChkParams.viratio"><code class="docutils literal notranslate"><span class="pre">ChkParams.viratio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.ChkParams.scfene"><code class="docutils literal notranslate"><span class="pre">ChkParams.scfene</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.ChkParams.totene"><code class="docutils literal notranslate"><span class="pre">ChkParams.totene</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.ChkParams.genarr"><code class="docutils literal notranslate"><span class="pre">ChkParams.genarr</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef"><code class="docutils literal notranslate"><span class="pre">GenDef</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.A0"><code class="docutils literal notranslate"><span class="pre">GenDef.A0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.CbsOIii"><code class="docutils literal notranslate"><span class="pre">GenDef.CbsOIii</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.CisEne"><code class="docutils literal notranslate"><span class="pre">GenDef.CisEne</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.CurProFreq"><code class="docutils literal notranslate"><span class="pre">GenDef.CurProFreq</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.Dpuhf"><code class="docutils literal notranslate"><span class="pre">GenDef.Dpuhf</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.Dummy"><code class="docutils literal notranslate"><span class="pre">GenDef.Dummy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.E2"><code class="docutils literal notranslate"><span class="pre">GenDef.E2</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.ECiCcQciBd"><code class="docutils literal notranslate"><span class="pre">GenDef.ECiCcQciBd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.Ecbs2"><code class="docutils literal notranslate"><span class="pre">GenDef.Ecbs2</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.Ecbsi"><code class="docutils literal notranslate"><span class="pre">GenDef.Ecbsi</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.Eccd"><code class="docutils literal notranslate"><span class="pre">GenDef.Eccd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.EcisMP2"><code class="docutils literal notranslate"><span class="pre">GenDef.EcisMP2</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.ElecRF"><code class="docutils literal notranslate"><span class="pre">GenDef.ElecRF</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.ElecX"><code class="docutils literal notranslate"><span class="pre">GenDef.ElecX</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.ElecY"><code class="docutils literal notranslate"><span class="pre">GenDef.ElecY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.ElecZ"><code class="docutils literal notranslate"><span class="pre">GenDef.ElecZ</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.Epmp20"><code class="docutils literal notranslate"><span class="pre">GenDef.Epmp20</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.Epmp30"><code class="docutils literal notranslate"><span class="pre">GenDef.Epmp30</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.Epuhf"><code class="docutils literal notranslate"><span class="pre">GenDef.Epuhf</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.Evar1"><code class="docutils literal notranslate"><span class="pre">GenDef.Evar1</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.FlagExt"><code class="docutils literal notranslate"><span class="pre">GenDef.FlagExt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.ForzenEne"><code class="docutils literal notranslate"><span class="pre">GenDef.ForzenEne</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.HighestOrder"><code class="docutils literal notranslate"><span class="pre">GenDef.HighestOrder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.JobStat"><code class="docutils literal notranslate"><span class="pre">GenDef.JobStat</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.L116"><code class="docutils literal notranslate"><span class="pre">GenDef.L116</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.LenRefDet"><code class="docutils literal notranslate"><span class="pre">GenDef.LenRefDet</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.MP4EDQEne"><code class="docutils literal notranslate"><span class="pre">GenDef.MP4EDQEne</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.MP4SDQEne"><code class="docutils literal notranslate"><span class="pre">GenDef.MP4SDQEne</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.MP5"><code class="docutils literal notranslate"><span class="pre">GenDef.MP5</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.MultiStepEne"><code class="docutils literal notranslate"><span class="pre">GenDef.MultiStepEne</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.NIterMostRecSCF"><code class="docutils literal notranslate"><span class="pre">GenDef.NIterMostRecSCF</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.NimagFreq"><code class="docutils literal notranslate"><span class="pre">GenDef.NimagFreq</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.NucRF"><code class="docutils literal notranslate"><span class="pre">GenDef.NucRF</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.NucRep"><code class="docutils literal notranslate"><span class="pre">GenDef.NucRep</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.NucRepEne"><code class="docutils literal notranslate"><span class="pre">GenDef.NucRepEne</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.NucRepEneNoExf"><code class="docutils literal notranslate"><span class="pre">GenDef.NucRepEneNoExf</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.PressTher"><code class="docutils literal notranslate"><span class="pre">GenDef.PressTher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.ReacCoord"><code class="docutils literal notranslate"><span class="pre">GenDef.ReacCoord</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.RefBdEne"><code class="docutils literal notranslate"><span class="pre">GenDef.RefBdEne</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.RmsError"><code class="docutils literal notranslate"><span class="pre">GenDef.RmsError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.Rmsdopt"><code class="docutils literal notranslate"><span class="pre">GenDef.Rmsdopt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.S2"><code class="docutils literal notranslate"><span class="pre">GenDef.S2</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.S2Doubles"><code class="docutils literal notranslate"><span class="pre">GenDef.S2Doubles</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.S2FirstOrder"><code class="docutils literal notranslate"><span class="pre">GenDef.S2FirstOrder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.S2Scf"><code class="docutils literal notranslate"><span class="pre">GenDef.S2Scf</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.S4SD"><code class="docutils literal notranslate"><span class="pre">GenDef.S4SD</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.ScalFactorFreqTher"><code class="docutils literal notranslate"><span class="pre">GenDef.ScalFactorFreqTher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.Scf2E"><code class="docutils literal notranslate"><span class="pre">GenDef.Scf2E</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.ScfEne"><code class="docutils literal notranslate"><span class="pre">GenDef.ScfEne</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.ScfEneFirstIter"><code class="docutils literal notranslate"><span class="pre">GenDef.ScfEneFirstIter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.ScrfA0"><code class="docutils literal notranslate"><span class="pre">GenDef.ScrfA0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.ScrfGf"><code class="docutils literal notranslate"><span class="pre">GenDef.ScrfGf</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.SingE2ToRomp2"><code class="docutils literal notranslate"><span class="pre">GenDef.SingE2ToRomp2</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.Tau"><code class="docutils literal notranslate"><span class="pre">GenDef.Tau</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.TempTher"><code class="docutils literal notranslate"><span class="pre">GenDef.TempTher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.ThermalEne"><code class="docutils literal notranslate"><span class="pre">GenDef.ThermalEne</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.TotEneRF"><code class="docutils literal notranslate"><span class="pre">GenDef.TotEneRF</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.UMP2Ene"><code class="docutils literal notranslate"><span class="pre">GenDef.UMP2Ene</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.UMP3Ene"><code class="docutils literal notranslate"><span class="pre">GenDef.UMP3Ene</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.UMP4Ene"><code class="docutils literal notranslate"><span class="pre">GenDef.UMP4Ene</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.Ump4d"><code class="docutils literal notranslate"><span class="pre">GenDef.Ump4d</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.UpdateEne"><code class="docutils literal notranslate"><span class="pre">GenDef.UpdateEne</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.VirialRatio"><code class="docutils literal notranslate"><span class="pre">GenDef.VirialRatio</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.GenDef.ZeroPointEne"><code class="docutils literal notranslate"><span class="pre">GenDef.ZeroPointEne</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol"><code class="docutils literal notranslate"><span class="pre">Mol</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.natoms"><code class="docutils literal notranslate"><span class="pre">Mol.natoms</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.totchg"><code class="docutils literal notranslate"><span class="pre">Mol.totchg</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.ne"><code class="docutils literal notranslate"><span class="pre">Mol.ne</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.nae"><code class="docutils literal notranslate"><span class="pre">Mol.nae</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.nbe"><code class="docutils literal notranslate"><span class="pre">Mol.nbe</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.nbasis"><code class="docutils literal notranslate"><span class="pre">Mol.nbasis</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.nbsuse"><code class="docutils literal notranslate"><span class="pre">Mol.nbsuse</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.ndim"><code class="docutils literal notranslate"><span class="pre">Mol.ndim</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.multiplicity"><code class="docutils literal notranslate"><span class="pre">Mol.multiplicity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.names"><code class="docutils literal notranslate"><span class="pre">Mol.names</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.coords"><code class="docutils literal notranslate"><span class="pre">Mol.coords</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.hessian"><code class="docutils literal notranslate"><span class="pre">Mol.hessian</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.aoene"><code class="docutils literal notranslate"><span class="pre">Mol.aoene</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.boene"><code class="docutils literal notranslate"><span class="pre">Mol.boene</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.amocoeff"><code class="docutils literal notranslate"><span class="pre">Mol.amocoeff</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.bmocoeff"><code class="docutils literal notranslate"><span class="pre">Mol.bmocoeff</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.orthbasis"><code class="docutils literal notranslate"><span class="pre">Mol.orthbasis</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.cell"><code class="docutils literal notranslate"><span class="pre">Mol.cell</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.primexp"><code class="docutils literal notranslate"><span class="pre">Mol.primexp</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.concoeff"><code class="docutils literal notranslate"><span class="pre">Mol.concoeff</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.spconcoeff"><code class="docutils literal notranslate"><span class="pre">Mol.spconcoeff</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.cshell"><code class="docutils literal notranslate"><span class="pre">Mol.cshell</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.nucchg"><code class="docutils literal notranslate"><span class="pre">Mol.nucchg</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.shelltypes"><code class="docutils literal notranslate"><span class="pre">Mol.shelltypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.shellnprim"><code class="docutils literal notranslate"><span class="pre">Mol.shellnprim</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="GauChkParser.html#GauChkParser.Types.Mol.shell2map"><code class="docutils literal notranslate"><span class="pre">Mol.shell2map</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GauChkParser.html#module-GauChkParser">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="GauChkParser.html" class="btn btn-neutral float-right" title="GauChkParser package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Python API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2025, Yujie Liu.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
