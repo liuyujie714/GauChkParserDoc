@@ -22,6 +22,7 @@ release = '0.1.x'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',  # 支持 Doxygen 风格
+    'sphinx_markdown_tables', 'myst_parser' # 支持Markdown
 ]
 
 
@@ -36,4 +37,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 

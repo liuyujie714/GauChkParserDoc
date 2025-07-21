@@ -10,4 +10,5 @@ Python API
    :maxdepth: 2
    :caption: Contents:
 
+   source/install.md
    source/modules.rst
