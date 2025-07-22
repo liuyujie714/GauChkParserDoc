@@ -18,6 +18,8 @@ The Python module extracts common basic information from **Gaussian** `.chk` bin
 
 * The Shell types, The number of primitives per shell, Contraction coefficients, Primitive exponents, etc.
 
+* write gjf, fchk  file
+
 * TODO ...
 
 
