@@ -44,7 +44,7 @@ print(f'Cell size: {mol.cell}')
 # write gjf file
 obj.write_gjf("XXX.gjf")
 
-# wrie fchk file
+# write fchk file
 obj.write_fchk("XXX.fchk")
 
 ```
