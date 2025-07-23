@@ -20,6 +20,8 @@ The Python module extracts common basic information from **Gaussian** `.chk` bin
 
 * write gjf, fchk file
 
+* Total/Spin Density matrix if it exists
+
 * TODO ...
 
 

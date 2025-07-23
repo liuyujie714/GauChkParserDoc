@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>GauChkParser package &mdash; GauChkParser 0.1.x documentation</title>
+  <title>GauChkParser package &mdash; GauChkParser 0.1.17 documentation</title>
   
 
   
@@ -104,6 +104,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-GauChkParser.Types">GauChkParser.Types module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#GauChkParser.Types.ChkParams"><code class="docutils literal notranslate"><span class="pre">ChkParams</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#GauChkParser.Types.DensDef"><code class="docutils literal notranslate"><span class="pre">DensDef</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#GauChkParser.Types.GenDef"><code class="docutils literal notranslate"><span class="pre">GenDef</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#GauChkParser.Types.Mol"><code class="docutils literal notranslate"><span class="pre">Mol</span></code></a></li>
 </ul>
@@ -383,6 +384,67 @@
 <dd class="field-odd"><p>List[float]</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GauChkParser.Types.</span></span><span class="sig-name descname"><span class="pre">DensDef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GauChkParser.Types.DensDef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>Density matrix definition in enum type, such as use totdens[DensDef.DensSCF], return empty if not exists</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.Dens2ndOrder">
+<span class="sig-name descname"><span class="pre">Dens2ndOrder</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.Dens2ndOrder" title="Permalink to this definition">¶</a></dt>
+<dd><p>2nd Order Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensCC">
+<span class="sig-name descname"><span class="pre">DensCC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensCC" title="Permalink to this definition">¶</a></dt>
+<dd><p>CC Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensCI">
+<span class="sig-name descname"><span class="pre">DensCI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensCI" title="Permalink to this definition">¶</a></dt>
+<dd><p>CI Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensCIRho">
+<span class="sig-name descname"><span class="pre">DensCIRho</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensCIRho" title="Permalink to this definition">¶</a></dt>
+<dd><p>CI Rho(1) Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensMP2">
+<span class="sig-name descname"><span class="pre">DensMP2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensMP2" title="Permalink to this definition">¶</a></dt>
+<dd><p>MP2 Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensMP3">
+<span class="sig-name descname"><span class="pre">DensMP3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensMP3" title="Permalink to this definition">¶</a></dt>
+<dd><p>MP3 Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensMP4">
+<span class="sig-name descname"><span class="pre">DensMP4</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensMP4" title="Permalink to this definition">¶</a></dt>
+<dd><p>MP4 Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensPSI">
+<span class="sig-name descname"><span class="pre">DensPSI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensPSI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Psi(1) Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensSCF">
+<span class="sig-name descname"><span class="pre">DensSCF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensSCF" title="Permalink to this definition">¶</a></dt>
+<dd><p>SCF Density</p>
 </dd></dl>
 
 </dd></dl>
@@ -780,7 +842,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="GauChkParser.Types.Mol">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GauChkParser.Types.</span></span><span class="sig-name descname"><span class="pre">Mol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">natoms:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">totchg:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ne:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nae:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbe:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbasis:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbsuse:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndim:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplicity:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names:</span> <span class="pre">~typing.List[str]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomicnums:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coords:</span> <span class="pre">~numpy.ndarray</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hessian:</span> <span class="pre">~numpy.ndarray</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aoene:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boene:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amocoeff:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bmocoeff:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orthbasis:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell:</span> <span class="pre">~numpy.ndarray</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primexp:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concoeff:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spconcoeff:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cshell:</span> <span class="pre">~numpy.ndarray</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nucchg:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shelltypes:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shellnprim:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell2map:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orblabels:</span> <span class="pre">~typing.List[str]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GauChkParser.Types.Mol" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GauChkParser.Types.</span></span><span class="sig-name descname"><span class="pre">Mol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">natoms:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">totchg:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ne:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nae:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbe:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbasis:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbsuse:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndim:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplicity:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names:</span> <span class="pre">~typing.List[str]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomicnums:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coords:</span> <span class="pre">~numpy.ndarray</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hessian:</span> <span class="pre">~numpy.ndarray</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aoene:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boene:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amocoeff:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bmocoeff:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orthbasis:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell:</span> <span class="pre">~numpy.ndarray</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primexp:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concoeff:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spconcoeff:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cshell:</span> <span class="pre">~numpy.ndarray</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nucchg:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shelltypes:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shellnprim:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell2map:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orblabels:</span> <span class="pre">~typing.List[str]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">totdens:</span> <span class="pre">~typing.List[~typing.List[float]]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spindens:</span> <span class="pre">~typing.List[~typing.List[float]]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GauChkParser.Types.Mol" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A mol dataclass for storing molecule data</p>
 <dl class="py attribute">
@@ -1076,6 +1138,28 @@
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.Mol.totdens">
+<span class="sig-name descname"><span class="pre">totdens</span></span><a class="headerlink" href="#GauChkParser.Types.Mol.totdens" title="Permalink to this definition">¶</a></dt>
+<dd><p>total density matrix, nine types see DensDef, such as Total SCF Density</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[List[float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.Mol.spindens">
+<span class="sig-name descname"><span class="pre">spindens</span></span><a class="headerlink" href="#GauChkParser.Types.Mol.spindens" title="Permalink to this definition">¶</a></dt>
+<dd><p>spin density matrix, nine types see DensDef, such as Spin SCF Density</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[List[float]]</p>
 </dd>
 </dl>
 </dd></dl>
