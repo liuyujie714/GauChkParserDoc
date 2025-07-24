@@ -64,6 +64,10 @@
           
             
             
+              <div class="version">
+                0.1.17
+              </div>
+            
           
 
           
@@ -103,10 +107,10 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-GauChkParser.Types">GauChkParser.Types module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#GauChkParser.Types.ChkParams"><code class="docutils literal notranslate"><span class="pre">ChkParams</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#GauChkParser.Types.DensDef"><code class="docutils literal notranslate"><span class="pre">DensDef</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#GauChkParser.Types.GenDef"><code class="docutils literal notranslate"><span class="pre">GenDef</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#GauChkParser.Types.DensDef"><code class="docutils literal notranslate"><span class="pre">DensDef</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#GauChkParser.Types.Mol"><code class="docutils literal notranslate"><span class="pre">Mol</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#GauChkParser.Types.ChkParams"><code class="docutils literal notranslate"><span class="pre">ChkParams</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-GauChkParser">Module contents</a></li>
@@ -196,15 +200,15 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class for reading .chk file generaged by Gaussian 09/16 x64 version</p>
 <dl class="py property">
-<dt class="sig sig-object py" id="GauChkParser.ChkReader.ChkReader.ilsw">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ilsw</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#GauChkParser.ChkReader.ChkReader.ilsw" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return ILSW array (size=100)</p>
-</dd></dl>
-
-<dl class="py property">
 <dt class="sig sig-object py" id="GauChkParser.ChkReader.ChkReader.params">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#GauChkParser.Types.ChkParams" title="GauChkParser.Types.ChkParams"><span class="pre">ChkParams</span></a></em><a class="headerlink" href="#GauChkParser.ChkReader.ChkReader.params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return ChkParams dataclass</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="GauChkParser.ChkReader.ChkReader.ilsw">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ilsw</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#GauChkParser.ChkReader.ChkReader.ilsw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return ILSW array (size=100)</p>
 </dd></dl>
 
 <dl class="py property">
@@ -214,23 +218,23 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="GauChkParser.ChkReader.ChkReader.write_fchk">
-<span class="sig-name descname"><span class="pre">write_fchk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GauChkParser.ChkReader.ChkReader.write_fchk" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write a formatted fchk file based on the partial information of .chk</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>fname</strong> – the output fchk file name</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="GauChkParser.ChkReader.ChkReader.write_gjf">
 <span class="sig-name descname"><span class="pre">write_gjf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GauChkParser.ChkReader.ChkReader.write_gjf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write a gjf file based on the information of .chk</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>fname</strong> – the output gjf file name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="GauChkParser.ChkReader.ChkReader.write_fchk">
+<span class="sig-name descname"><span class="pre">write_fchk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GauChkParser.ChkReader.ChkReader.write_fchk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a formatted fchk file based on the partial information of .chk</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fname</strong> – the output fchk file name</p>
 </dd>
 </dl>
 </dd></dl>
@@ -250,286 +254,14 @@
 <section id="module-GauChkParser.Types">
 <span id="gauchkparser-types-module"></span><h2>GauChkParser.Types module<a class="headerlink" href="#module-GauChkParser.Types" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GauChkParser.Types.</span></span><span class="sig-name descname"><span class="pre">ChkParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mol:</span> <span class="pre">~GauChkParser.Types.Mol</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">route:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gauver:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jobtype:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baset:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">viratio:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scfene:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">totene:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">info1_9:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">genarr:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GauChkParser.Types.ChkParams" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A chk parameters dataclass</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.mol">
-<span class="sig-name descname"><span class="pre">mol</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.mol" title="Permalink to this definition">¶</a></dt>
-<dd><p>The mol structure dataclass</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#GauChkParser.Types.Mol" title="GauChkParser.Types.Mol">GauChkParser.Types.Mol</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.route">
-<span class="sig-name descname"><span class="pre">route</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.route" title="Permalink to this definition">¶</a></dt>
-<dd><p>The route string</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.gauver">
-<span class="sig-name descname"><span class="pre">gauver</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.gauver" title="Permalink to this definition">¶</a></dt>
-<dd><p>The gaussian version description</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.title">
-<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.title" title="Permalink to this definition">¶</a></dt>
-<dd><p>The title section description</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.jobtype">
-<span class="sig-name descname"><span class="pre">jobtype</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.jobtype" title="Permalink to this definition">¶</a></dt>
-<dd><p>job type, such as SP, Freq, etc.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.method">
-<span class="sig-name descname"><span class="pre">method</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.method" title="Permalink to this definition">¶</a></dt>
-<dd><p>method, such as RHF, MP4, etc.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.baset">
-<span class="sig-name descname"><span class="pre">baset</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.baset" title="Permalink to this definition">¶</a></dt>
-<dd><p>basis set, such as def2SVP, 6-31G, etc</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.viratio">
-<span class="sig-name descname"><span class="pre">viratio</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.viratio" title="Permalink to this definition">¶</a></dt>
-<dd><p>virtual ratio</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.scfene">
-<span class="sig-name descname"><span class="pre">scfene</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.scfene" title="Permalink to this definition">¶</a></dt>
-<dd><p>scf energy</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.totene">
-<span class="sig-name descname"><span class="pre">totene</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.totene" title="Permalink to this definition">¶</a></dt>
-<dd><p>total energy</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.info1_9">
-<span class="sig-name descname"><span class="pre">info1_9</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.info1_9" title="Permalink to this definition">¶</a></dt>
-<dd><p>The scalar data of Info1-9, size=9</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>List[int]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.genarr">
-<span class="sig-name descname"><span class="pre">genarr</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.genarr" title="Permalink to this definition">¶</a></dt>
-<dd><p>The scalar data of the calculation (Gen array), size=1000</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>List[float]</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="GauChkParser.Types.DensDef">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GauChkParser.Types.</span></span><span class="sig-name descname"><span class="pre">DensDef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GauChkParser.Types.DensDef" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
-<p>Density matrix definition in enum type, such as use totdens[DensDef.DensSCF], return empty if not exists</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.Dens2ndOrder">
-<span class="sig-name descname"><span class="pre">Dens2ndOrder</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.Dens2ndOrder" title="Permalink to this definition">¶</a></dt>
-<dd><p>2nd Order Density</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensCC">
-<span class="sig-name descname"><span class="pre">DensCC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensCC" title="Permalink to this definition">¶</a></dt>
-<dd><p>CC Density</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensCI">
-<span class="sig-name descname"><span class="pre">DensCI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensCI" title="Permalink to this definition">¶</a></dt>
-<dd><p>CI Density</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensCIRho">
-<span class="sig-name descname"><span class="pre">DensCIRho</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensCIRho" title="Permalink to this definition">¶</a></dt>
-<dd><p>CI Rho(1) Density</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensMP2">
-<span class="sig-name descname"><span class="pre">DensMP2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensMP2" title="Permalink to this definition">¶</a></dt>
-<dd><p>MP2 Density</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensMP3">
-<span class="sig-name descname"><span class="pre">DensMP3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensMP3" title="Permalink to this definition">¶</a></dt>
-<dd><p>MP3 Density</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensMP4">
-<span class="sig-name descname"><span class="pre">DensMP4</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensMP4" title="Permalink to this definition">¶</a></dt>
-<dd><p>MP4 Density</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensPSI">
-<span class="sig-name descname"><span class="pre">DensPSI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensPSI" title="Permalink to this definition">¶</a></dt>
-<dd><p>Psi(1) Density</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensSCF">
-<span class="sig-name descname"><span class="pre">DensSCF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensSCF" title="Permalink to this definition">¶</a></dt>
-<dd><p>SCF Density</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
 <dt class="sig sig-object py" id="GauChkParser.Types.GenDef">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GauChkParser.Types.</span></span><span class="sig-name descname"><span class="pre">GenDef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GauChkParser.Types.GenDef" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
 <p>Gen Array index in enum type, such as use genarr[GenDef.VirialRatio]</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.A0">
-<span class="sig-name descname"><span class="pre">A0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">46</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.A0" title="Permalink to this definition">¶</a></dt>
-<dd><p>A0</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.CbsOIii">
-<span class="sig-name descname"><span class="pre">CbsOIii</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">35</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.CbsOIii" title="Permalink to this definition">¶</a></dt>
-<dd><p>CBS OIii</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.CisEne">
-<span class="sig-name descname"><span class="pre">CisEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.CisEne" title="Permalink to this definition">¶</a></dt>
-<dd><p>CIS energy</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.CurProFreq">
-<span class="sig-name descname"><span class="pre">CurProFreq</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">56</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.CurProFreq" title="Permalink to this definition">¶</a></dt>
-<dd><p>Curvature from projected frequency jobs</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Dpuhf">
-<span class="sig-name descname"><span class="pre">Dpuhf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">14</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Dpuhf" title="Permalink to this definition">¶</a></dt>
-<dd><p>D(PUHF)</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Dummy">
-<span class="sig-name descname"><span class="pre">Dummy</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">47</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Dummy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Unused in G16</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.E2">
-<span class="sig-name descname"><span class="pre">E2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">53</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.E2" title="Permalink to this definition">¶</a></dt>
-<dd><p>E(2) with current orbitals for extrapolation</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ECiCcQciBd">
-<span class="sig-name descname"><span class="pre">ECiCcQciBd</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ECiCcQciBd" title="Permalink to this definition">¶</a></dt>
-<dd><p>E(CI/CC/QCI/BD)</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Ecbs2">
-<span class="sig-name descname"><span class="pre">Ecbs2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Ecbs2" title="Permalink to this definition">¶</a></dt>
-<dd><p>ECBS2</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Ecbsi">
-<span class="sig-name descname"><span class="pre">Ecbsi</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">17</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Ecbsi" title="Permalink to this definition">¶</a></dt>
-<dd><p>ECBSI</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Eccd">
-<span class="sig-name descname"><span class="pre">Eccd</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Eccd" title="Permalink to this definition">¶</a></dt>
-<dd><p>E(CCD+ST4(CCD)/QCISD(T)/BD(T)/CI+Davidson)</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.EcisMP2">
-<span class="sig-name descname"><span class="pre">EcisMP2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">21</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.EcisMP2" title="Permalink to this definition">¶</a></dt>
-<dd><p>E(CIS-MP2)</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ElecRF">
-<span class="sig-name descname"><span class="pre">ElecRF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">55</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ElecRF" title="Permalink to this definition">¶</a></dt>
-<dd><p>Electronic term in the reaction field energy</p>
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.VirialRatio">
+<span class="sig-name descname"><span class="pre">VirialRatio</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.VirialRatio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Virial ratio.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -551,6 +283,90 @@
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Scf2E">
+<span class="sig-name descname"><span class="pre">Scf2E</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Scf2E" title="Permalink to this definition">¶</a></dt>
+<dd><p>2e SCF energy</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ScrfGf">
+<span class="sig-name descname"><span class="pre">ScrfGf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ScrfGf" title="Permalink to this definition">¶</a></dt>
+<dd><p>SCRF g-factor</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ScrfA0">
+<span class="sig-name descname"><span class="pre">ScrfA0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ScrfA0" title="Permalink to this definition">¶</a></dt>
+<dd><p>SCRF a0</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ThermalEne">
+<span class="sig-name descname"><span class="pre">ThermalEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ThermalEne" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thermal Energy</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ECiCcQciBd">
+<span class="sig-name descname"><span class="pre">ECiCcQciBd</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ECiCcQciBd" title="Permalink to this definition">¶</a></dt>
+<dd><p>E(CI/CC/QCI/BD)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Eccd">
+<span class="sig-name descname"><span class="pre">Eccd</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Eccd" title="Permalink to this definition">¶</a></dt>
+<dd><p>E(CCD+ST4(CCD)/QCISD(T)/BD(T)/CI+Davidson)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Evar1">
+<span class="sig-name descname"><span class="pre">Evar1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Evar1" title="Permalink to this definition">¶</a></dt>
+<dd><p>E(VAR1)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ZeroPointEne">
+<span class="sig-name descname"><span class="pre">ZeroPointEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ZeroPointEne" title="Permalink to this definition">¶</a></dt>
+<dd><p>Zero-point energy</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.MultiStepEne">
+<span class="sig-name descname"><span class="pre">MultiStepEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.MultiStepEne" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multi-step (G1, G2, etc.) energy</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.NimagFreq">
+<span class="sig-name descname"><span class="pre">NimagFreq</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.NimagFreq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of imaginary frequencies.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Dpuhf">
+<span class="sig-name descname"><span class="pre">Dpuhf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">14</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Dpuhf" title="Permalink to this definition">¶</a></dt>
+<dd><p>D(PUHF)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Epuhf">
+<span class="sig-name descname"><span class="pre">Epuhf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Epuhf" title="Permalink to this definition">¶</a></dt>
+<dd><p>EPUHF</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Ecbs2">
+<span class="sig-name descname"><span class="pre">Ecbs2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Ecbs2" title="Permalink to this definition">¶</a></dt>
+<dd><p>ECBS2</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Ecbsi">
+<span class="sig-name descname"><span class="pre">Ecbsi</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">17</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Ecbsi" title="Permalink to this definition">¶</a></dt>
+<dd><p>ECBSI</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Epmp20">
 <span class="sig-name descname"><span class="pre">Epmp20</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">18</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Epmp20" title="Permalink to this definition">¶</a></dt>
 <dd><p>EPMP2-0</p>
@@ -563,129 +379,15 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Epuhf">
-<span class="sig-name descname"><span class="pre">Epuhf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Epuhf" title="Permalink to this definition">¶</a></dt>
-<dd><p>EPUHF</p>
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Rmsdopt">
+<span class="sig-name descname"><span class="pre">Rmsdopt</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Rmsdopt" title="Permalink to this definition">¶</a></dt>
+<dd><p>ROOT-MEAN-SQUARED FORCE OF OPTIMIZED PARAMETERS</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Evar1">
-<span class="sig-name descname"><span class="pre">Evar1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Evar1" title="Permalink to this definition">¶</a></dt>
-<dd><p>E(VAR1)</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.FlagExt">
-<span class="sig-name descname"><span class="pre">FlagExt</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">58</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.FlagExt" title="Permalink to this definition">¶</a></dt>
-<dd><p>Flag for status from external programs; see RunExt</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ForzenEne">
-<span class="sig-name descname"><span class="pre">ForzenEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">29</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ForzenEne" title="Permalink to this definition">¶</a></dt>
-<dd><p>Frozen-core part of total energy</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.HighestOrder">
-<span class="sig-name descname"><span class="pre">HighestOrder</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">61</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.HighestOrder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Highest order of nuclear coordinate derivatives available</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.JobStat">
-<span class="sig-name descname"><span class="pre">JobStat</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">60</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.JobStat" title="Permalink to this definition">¶</a></dt>
-<dd><p>Job status, -1 = in progress, 0 = undefined/old chk file, 1 = finished successfully, 2 = step in mult i-step job completed successfully, 3 = job terminated with error</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.L116">
-<span class="sig-name descname"><span class="pre">L116</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">39</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.L116" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set in L116 for some reason</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.LenRefDet">
-<span class="sig-name descname"><span class="pre">LenRefDet</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">41</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.LenRefDet" title="Permalink to this definition">¶</a></dt>
-<dd><p>T (LENGTH OF CORRECTION OF REFERENCE DETERMINANT)</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.MP4EDQEne">
-<span class="sig-name descname"><span class="pre">MP4EDQEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">37</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.MP4EDQEne" title="Permalink to this definition">¶</a></dt>
-<dd><p>MP4DQ ENERGY</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.MP4SDQEne">
-<span class="sig-name descname"><span class="pre">MP4SDQEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">38</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.MP4SDQEne" title="Permalink to this definition">¶</a></dt>
-<dd><p>MP4SDQ ENERGY</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.MP5">
-<span class="sig-name descname"><span class="pre">MP5</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">27</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.MP5" title="Permalink to this definition">¶</a></dt>
-<dd><p>MP5</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.MultiStepEne">
-<span class="sig-name descname"><span class="pre">MultiStepEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.MultiStepEne" title="Permalink to this definition">¶</a></dt>
-<dd><p>Multi-step (G1, G2, etc.) energy</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.NIterMostRecSCF">
-<span class="sig-name descname"><span class="pre">NIterMostRecSCF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">62</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.NIterMostRecSCF" title="Permalink to this definition">¶</a></dt>
-<dd><p>Number of iterations in most recent SCF</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.NimagFreq">
-<span class="sig-name descname"><span class="pre">NimagFreq</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.NimagFreq" title="Permalink to this definition">¶</a></dt>
-<dd><p>Number of imaginary frequencies.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.NucRF">
-<span class="sig-name descname"><span class="pre">NucRF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">54</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.NucRF" title="Permalink to this definition">¶</a></dt>
-<dd><p>Nuclear term in the reaction field energy</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.NucRep">
-<span class="sig-name descname"><span class="pre">NucRep</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">51</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.NucRep" title="Permalink to this definition">¶</a></dt>
-<dd><p>Nuclear repulsion contribution from inactive atom pairs</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.NucRepEne">
-<span class="sig-name descname"><span class="pre">NucRepEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">40</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.NucRepEne" title="Permalink to this definition">¶</a></dt>
-<dd><p>NUCLEAR REPULSION ENERGY</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.NucRepEneNoExf">
-<span class="sig-name descname"><span class="pre">NucRepEneNoExf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">63</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.NucRepEneNoExf" title="Permalink to this definition">¶</a></dt>
-<dd><p>Nuclear repulsion energy without external field contribution</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.PressTher">
-<span class="sig-name descname"><span class="pre">PressTher</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">49</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.PressTher" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pressure for thermochemistry</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ReacCoord">
-<span class="sig-name descname"><span class="pre">ReacCoord</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">57</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ReacCoord" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reaction coordinate for single-points along IRCs</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.RefBdEne">
-<span class="sig-name descname"><span class="pre">RefBdEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">26</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.RefBdEne" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reference energy for BD</p>
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.EcisMP2">
+<span class="sig-name descname"><span class="pre">EcisMP2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">21</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.EcisMP2" title="Permalink to this definition">¶</a></dt>
+<dd><p>E(CIS-MP2)</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -695,33 +397,33 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Rmsdopt">
-<span class="sig-name descname"><span class="pre">Rmsdopt</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Rmsdopt" title="Permalink to this definition">¶</a></dt>
-<dd><p>ROOT-MEAN-SQUARED FORCE OF OPTIMIZED PARAMETERS</p>
-</dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="GauChkParser.Types.GenDef.S2">
 <span class="sig-name descname"><span class="pre">S2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">23</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.S2" title="Permalink to this definition">¶</a></dt>
 <dd><p>S**2 after annihilation of first contaminant.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.S2Doubles">
-<span class="sig-name descname"><span class="pre">S2Doubles</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">45</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.S2Doubles" title="Permalink to this definition">¶</a></dt>
-<dd><p>&lt;S**2&gt; CORRECTED FOR DOUBLES (NOT IMPLEMENTED)</p>
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.CisEne">
+<span class="sig-name descname"><span class="pre">CisEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.CisEne" title="Permalink to this definition">¶</a></dt>
+<dd><p>CIS energy</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.S2FirstOrder">
-<span class="sig-name descname"><span class="pre">S2FirstOrder</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">44</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.S2FirstOrder" title="Permalink to this definition">¶</a></dt>
-<dd><p>&lt;S**2&gt; CORRECTED TO FIRST ORDER (AFTER DOUBAR)</p>
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Ump4d">
+<span class="sig-name descname"><span class="pre">Ump4d</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">25</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Ump4d" title="Permalink to this definition">¶</a></dt>
+<dd><p>UMP4D (=UMP4DQ - E4(R+Q))</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.S2Scf">
-<span class="sig-name descname"><span class="pre">S2Scf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">43</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.S2Scf" title="Permalink to this definition">¶</a></dt>
-<dd><p>&lt;S**2&gt; OF SCF WAVE FUNCTION</p>
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.RefBdEne">
+<span class="sig-name descname"><span class="pre">RefBdEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">26</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.RefBdEne" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference energy for BD</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.MP5">
+<span class="sig-name descname"><span class="pre">MP5</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">27</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.MP5" title="Permalink to this definition">¶</a></dt>
+<dd><p>MP5</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -731,45 +433,9 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ScalFactorFreqTher">
-<span class="sig-name descname"><span class="pre">ScalFactorFreqTher</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">50</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ScalFactorFreqTher" title="Permalink to this definition">¶</a></dt>
-<dd><p>Scale factor for frequencies in thermochemistry</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Scf2E">
-<span class="sig-name descname"><span class="pre">Scf2E</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Scf2E" title="Permalink to this definition">¶</a></dt>
-<dd><p>2e SCF energy</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ScfEne">
-<span class="sig-name descname"><span class="pre">ScfEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">31</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ScfEne" title="Permalink to this definition">¶</a></dt>
-<dd><p>SCF ENERGY.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ScfEneFirstIter">
-<span class="sig-name descname"><span class="pre">ScfEneFirstIter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">59</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ScfEneFirstIter" title="Permalink to this definition">¶</a></dt>
-<dd><p>SCF energy at first iteration</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ScrfA0">
-<span class="sig-name descname"><span class="pre">ScrfA0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ScrfA0" title="Permalink to this definition">¶</a></dt>
-<dd><p>SCRF a0</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ScrfGf">
-<span class="sig-name descname"><span class="pre">ScrfGf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ScrfGf" title="Permalink to this definition">¶</a></dt>
-<dd><p>SCRF g-factor</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.SingE2ToRomp2">
-<span class="sig-name descname"><span class="pre">SingE2ToRomp2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">52</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.SingE2ToRomp2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Singles contribution to E2 in ROMP2</p>
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ForzenEne">
+<span class="sig-name descname"><span class="pre">ForzenEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">29</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ForzenEne" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frozen-core part of total energy</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -779,21 +445,9 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.TempTher">
-<span class="sig-name descname"><span class="pre">TempTher</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">48</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.TempTher" title="Permalink to this definition">¶</a></dt>
-<dd><p>Temperature for thermochemistry</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ThermalEne">
-<span class="sig-name descname"><span class="pre">ThermalEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ThermalEne" title="Permalink to this definition">¶</a></dt>
-<dd><p>Thermal Energy</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.TotEneRF">
-<span class="sig-name descname"><span class="pre">TotEneRF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">36</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.TotEneRF" title="Permalink to this definition">¶</a></dt>
-<dd><p>Total energy with RF from L116</p>
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ScfEne">
+<span class="sig-name descname"><span class="pre">ScfEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">31</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ScfEne" title="Permalink to this definition">¶</a></dt>
+<dd><p>SCF ENERGY.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -815,9 +469,45 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Ump4d">
-<span class="sig-name descname"><span class="pre">Ump4d</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">25</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Ump4d" title="Permalink to this definition">¶</a></dt>
-<dd><p>UMP4D (=UMP4DQ - E4(R+Q))</p>
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.CbsOIii">
+<span class="sig-name descname"><span class="pre">CbsOIii</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">35</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.CbsOIii" title="Permalink to this definition">¶</a></dt>
+<dd><p>CBS OIii</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.TotEneRF">
+<span class="sig-name descname"><span class="pre">TotEneRF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">36</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.TotEneRF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Total energy with RF from L116</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.MP4EDQEne">
+<span class="sig-name descname"><span class="pre">MP4EDQEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">37</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.MP4EDQEne" title="Permalink to this definition">¶</a></dt>
+<dd><p>MP4DQ ENERGY</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.MP4SDQEne">
+<span class="sig-name descname"><span class="pre">MP4SDQEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">38</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.MP4SDQEne" title="Permalink to this definition">¶</a></dt>
+<dd><p>MP4SDQ ENERGY</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.L116">
+<span class="sig-name descname"><span class="pre">L116</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">39</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.L116" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set in L116 for some reason</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.NucRepEne">
+<span class="sig-name descname"><span class="pre">NucRepEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">40</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.NucRepEne" title="Permalink to this definition">¶</a></dt>
+<dd><p>NUCLEAR REPULSION ENERGY</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.LenRefDet">
+<span class="sig-name descname"><span class="pre">LenRefDet</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">41</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.LenRefDet" title="Permalink to this definition">¶</a></dt>
+<dd><p>T (LENGTH OF CORRECTION OF REFERENCE DETERMINANT)</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -827,15 +517,190 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.VirialRatio">
-<span class="sig-name descname"><span class="pre">VirialRatio</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.VirialRatio" title="Permalink to this definition">¶</a></dt>
-<dd><p>Virial ratio.</p>
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.S2Scf">
+<span class="sig-name descname"><span class="pre">S2Scf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">43</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.S2Scf" title="Permalink to this definition">¶</a></dt>
+<dd><p>&lt;S**2&gt; OF SCF WAVE FUNCTION</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ZeroPointEne">
-<span class="sig-name descname"><span class="pre">ZeroPointEne</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ZeroPointEne" title="Permalink to this definition">¶</a></dt>
-<dd><p>Zero-point energy</p>
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.S2FirstOrder">
+<span class="sig-name descname"><span class="pre">S2FirstOrder</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">44</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.S2FirstOrder" title="Permalink to this definition">¶</a></dt>
+<dd><p>&lt;S**2&gt; CORRECTED TO FIRST ORDER (AFTER DOUBAR)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.S2Doubles">
+<span class="sig-name descname"><span class="pre">S2Doubles</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">45</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.S2Doubles" title="Permalink to this definition">¶</a></dt>
+<dd><p>&lt;S**2&gt; CORRECTED FOR DOUBLES (NOT IMPLEMENTED)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.A0">
+<span class="sig-name descname"><span class="pre">A0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">46</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.A0" title="Permalink to this definition">¶</a></dt>
+<dd><p>A0</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.Dummy">
+<span class="sig-name descname"><span class="pre">Dummy</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">47</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.Dummy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unused in G16</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.TempTher">
+<span class="sig-name descname"><span class="pre">TempTher</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">48</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.TempTher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temperature for thermochemistry</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.PressTher">
+<span class="sig-name descname"><span class="pre">PressTher</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">49</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.PressTher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pressure for thermochemistry</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ScalFactorFreqTher">
+<span class="sig-name descname"><span class="pre">ScalFactorFreqTher</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">50</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ScalFactorFreqTher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale factor for frequencies in thermochemistry</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.NucRep">
+<span class="sig-name descname"><span class="pre">NucRep</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">51</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.NucRep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nuclear repulsion contribution from inactive atom pairs</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.SingE2ToRomp2">
+<span class="sig-name descname"><span class="pre">SingE2ToRomp2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">52</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.SingE2ToRomp2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Singles contribution to E2 in ROMP2</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.E2">
+<span class="sig-name descname"><span class="pre">E2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">53</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.E2" title="Permalink to this definition">¶</a></dt>
+<dd><p>E(2) with current orbitals for extrapolation</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.NucRF">
+<span class="sig-name descname"><span class="pre">NucRF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">54</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.NucRF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nuclear term in the reaction field energy</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ElecRF">
+<span class="sig-name descname"><span class="pre">ElecRF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">55</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ElecRF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Electronic term in the reaction field energy</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.CurProFreq">
+<span class="sig-name descname"><span class="pre">CurProFreq</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">56</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.CurProFreq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Curvature from projected frequency jobs</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ReacCoord">
+<span class="sig-name descname"><span class="pre">ReacCoord</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">57</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ReacCoord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reaction coordinate for single-points along IRCs</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.FlagExt">
+<span class="sig-name descname"><span class="pre">FlagExt</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">58</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.FlagExt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flag for status from external programs; see RunExt</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.ScfEneFirstIter">
+<span class="sig-name descname"><span class="pre">ScfEneFirstIter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">59</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.ScfEneFirstIter" title="Permalink to this definition">¶</a></dt>
+<dd><p>SCF energy at first iteration</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.JobStat">
+<span class="sig-name descname"><span class="pre">JobStat</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">60</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.JobStat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Job status, -1 = in progress, 0 = undefined/old chk file, 1 = finished successfully, 2 = step in mult i-step job completed successfully, 3 = job terminated with error</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.HighestOrder">
+<span class="sig-name descname"><span class="pre">HighestOrder</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">61</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.HighestOrder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Highest order of nuclear coordinate derivatives available</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.NIterMostRecSCF">
+<span class="sig-name descname"><span class="pre">NIterMostRecSCF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">62</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.NIterMostRecSCF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of iterations in most recent SCF</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.GenDef.NucRepEneNoExf">
+<span class="sig-name descname"><span class="pre">NucRepEneNoExf</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">63</span></em><a class="headerlink" href="#GauChkParser.Types.GenDef.NucRepEneNoExf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nuclear repulsion energy without external field contribution</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GauChkParser.Types.</span></span><span class="sig-name descname"><span class="pre">DensDef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GauChkParser.Types.DensDef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>Density matrix definition in enum type, such as use totdens[DensDef.DensSCF], return empty list if not exists</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensSCF">
+<span class="sig-name descname"><span class="pre">DensSCF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensSCF" title="Permalink to this definition">¶</a></dt>
+<dd><p>SCF Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensPSI">
+<span class="sig-name descname"><span class="pre">DensPSI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensPSI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Psi(1) Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensMP2">
+<span class="sig-name descname"><span class="pre">DensMP2</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensMP2" title="Permalink to this definition">¶</a></dt>
+<dd><p>MP2 Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensMP3">
+<span class="sig-name descname"><span class="pre">DensMP3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensMP3" title="Permalink to this definition">¶</a></dt>
+<dd><p>MP3 Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensMP4">
+<span class="sig-name descname"><span class="pre">DensMP4</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensMP4" title="Permalink to this definition">¶</a></dt>
+<dd><p>MP4 Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensCIRho">
+<span class="sig-name descname"><span class="pre">DensCIRho</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensCIRho" title="Permalink to this definition">¶</a></dt>
+<dd><p>CI Rho(1) Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensCI">
+<span class="sig-name descname"><span class="pre">DensCI</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensCI" title="Permalink to this definition">¶</a></dt>
+<dd><p>CI Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.DensCC">
+<span class="sig-name descname"><span class="pre">DensCC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.DensCC" title="Permalink to this definition">¶</a></dt>
+<dd><p>CC Density</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.DensDef.Dens2ndOrder">
+<span class="sig-name descname"><span class="pre">Dens2ndOrder</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#GauChkParser.Types.DensDef.Dens2ndOrder" title="Permalink to this definition">¶</a></dt>
+<dd><p>2nd Order Density</p>
 </dd></dl>
 
 </dd></dl>
@@ -1160,6 +1025,145 @@
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>List[List[float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">GauChkParser.Types.</span></span><span class="sig-name descname"><span class="pre">ChkParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mol:</span> <span class="pre">~GauChkParser.Types.Mol</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">route:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gauver:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jobtype:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baset:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">viratio:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scfene:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">totene:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">info1_9:</span> <span class="pre">~typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">genarr:</span> <span class="pre">~typing.List[float]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#GauChkParser.Types.ChkParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A chk parameters dataclass</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.mol">
+<span class="sig-name descname"><span class="pre">mol</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.mol" title="Permalink to this definition">¶</a></dt>
+<dd><p>The mol structure dataclass</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#GauChkParser.Types.Mol" title="GauChkParser.Types.Mol">GauChkParser.Types.Mol</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.route">
+<span class="sig-name descname"><span class="pre">route</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.route" title="Permalink to this definition">¶</a></dt>
+<dd><p>The route string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.gauver">
+<span class="sig-name descname"><span class="pre">gauver</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.gauver" title="Permalink to this definition">¶</a></dt>
+<dd><p>The gaussian version description</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>The title section description</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.jobtype">
+<span class="sig-name descname"><span class="pre">jobtype</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.jobtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>job type, such as SP, Freq, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.method">
+<span class="sig-name descname"><span class="pre">method</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.method" title="Permalink to this definition">¶</a></dt>
+<dd><p>method, such as RHF, MP4, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.baset">
+<span class="sig-name descname"><span class="pre">baset</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.baset" title="Permalink to this definition">¶</a></dt>
+<dd><p>basis set, such as def2SVP, 6-31G, etc</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.viratio">
+<span class="sig-name descname"><span class="pre">viratio</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.viratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>virtual ratio</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.scfene">
+<span class="sig-name descname"><span class="pre">scfene</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.scfene" title="Permalink to this definition">¶</a></dt>
+<dd><p>scf energy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.totene">
+<span class="sig-name descname"><span class="pre">totene</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.totene" title="Permalink to this definition">¶</a></dt>
+<dd><p>total energy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.info1_9">
+<span class="sig-name descname"><span class="pre">info1_9</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.info1_9" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scalar data of Info1-9, size=9</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="GauChkParser.Types.ChkParams.genarr">
+<span class="sig-name descname"><span class="pre">genarr</span></span><a class="headerlink" href="#GauChkParser.Types.ChkParams.genarr" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scalar data of the calculation (Gen array), size=1000</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[float]</p>
 </dd>
 </dl>
 </dd></dl>
