@@ -35,7 +35,7 @@ The Python module extracts common basic information from **Gaussian** `.chk` bin
 # Installation
 
 ```
-pip install GauChkParser -i https://test.pypi.org/simple/
+pip install GauChkParser
 ```
 
 
