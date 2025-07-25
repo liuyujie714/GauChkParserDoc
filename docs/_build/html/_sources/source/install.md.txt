@@ -13,13 +13,13 @@ A Gaussian `.chk` parser to extract basic information. All energy values are in 
 # Installation
 
 ```
-pip install GauChkParser -i https://test.pypi.org/simple/
+pip install GauChkParser
 ```
 
 Please Always install the **Latest** version
 
 ```{note}
-Currently Only supported on Linux and Windows with Python >= 3.8
+Currently Only supported on Linux x64 and Windows x64 system with Python >= 3.8
 ```
 
 
