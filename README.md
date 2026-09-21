@@ -26,12 +26,6 @@ The Python module extracts common basic information from **Gaussian** `.chk` bin
 
 
 
-# NOTE
-
-`ONIOM` is currently not supported
-
-
-
 # Installation
 
 ```
